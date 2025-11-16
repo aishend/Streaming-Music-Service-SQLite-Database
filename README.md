@@ -17,14 +17,29 @@ This project involves the complete design and implementation of a relational dat
 ## Project Structure
 
 ```
+music-streaming-db/
 ├── docs/
-│   ├── uml.drawio
+│   ├── images/
+│   │   ├── conceptual-model.png
+│   │   └── relational-schema.png
+│   ├── conceptual-model.drawio  
 │   └── report.pdf
 ├── sql/
 │   ├── schema.sql
-│   └── data.sql
+│   ├── data.sql
+│   └── queries.sql
+├── .gitignore
+├── LICENSE
 └── README.md
+
 ```
+
+## Conceptual Model
+
+![Conceptual Model](docs/images/conceptual-model.png)
+
+### Relational Schema  
+![Database Schema](docs/images/relational-schema.png)
 
 ## Key Features
 
