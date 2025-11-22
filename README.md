@@ -8,7 +8,7 @@ Database Systems course project at Faculty of Engineering, University of Porto (
 
 **Academic Year:** 2025
 
-**Team Members:** Leandro Moreira, Ricardo Silva
+**Team Members:** Leandro Moreira, Ricardo Silva, Ana Ferreira
 
 ## Overview
 
