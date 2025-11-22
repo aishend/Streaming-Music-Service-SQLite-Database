@@ -1,7 +1,5 @@
 PRAGMA foreign_keys = ON;
 
-BEGIN TRANSACTION;
-
 INSERT INTO User (Name, Email, Role, Password, DateJoined) VALUES ('Joao Martins',    'joao.martins@example.com',    'Listener',  '1234',    '2024-03-01');
 INSERT INTO User (Name, Email, Role, Password, DateJoined) VALUES ('Maria Santos',    'maria.santos@example.com',    'Admin',     'abcd',    '2024-03-05');
 INSERT INTO User (Name, Email, Role, Password, DateJoined) VALUES ('Carlos Rocha',    'carlos.rocha@example.com',    'Listener',  'pass',    '2021-10-10');
@@ -298,5 +296,3 @@ INSERT INTO EpisodeListeningHistory(UserID, EpisodeID, TimePlayed) VALUES (6, 7,
 INSERT INTO EpisodeListeningHistory(UserID, EpisodeID, TimePlayed) VALUES (7, 8, 500);
 INSERT INTO EpisodeListeningHistory(UserID, EpisodeID, TimePlayed) VALUES (8, 9, 3200);
 INSERT INTO EpisodeListeningHistory(UserID, EpisodeID, TimePlayed) VALUES (9,10, 3400);
-
-COMMIT;
