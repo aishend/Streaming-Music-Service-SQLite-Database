@@ -1,15 +1,5 @@
 # Music Streaming Service - Database Design
 
-Database Systems course project at Faculty of Engineering, University of Porto (FEUP).
-
-**Course:** Bases de Dados (Database Systems)
-
-**Instructor:** Prof. Lázaro Costa
-
-**Academic Year:** 2025
-
-**Team Member:** Leandro Moreira
-
 ## Overview
 
 This project involves the complete design and implementation of a relational database for a music streaming service, similar to platforms like Spotify. The database supports users, artists, tracks, albums, playlists, podcasts, subscriptions, and listening history.
