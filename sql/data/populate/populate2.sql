@@ -1,0 +1,302 @@
+PRAGMA foreign_keys = ON;
+
+BEGIN TRANSACTION;
+
+INSERT INTO User (Name, Email, Role, Password, DateJoined) VALUES ('Joao Martins',    'joao.martins@example.com',    'Listener',  '1234',    '2024-03-01');
+INSERT INTO User (Name, Email, Role, Password, DateJoined) VALUES ('Maria Santos',    'maria.santos@example.com',    'Admin',     'abcd',    '2024-03-05');
+INSERT INTO User (Name, Email, Role, Password, DateJoined) VALUES ('Carlos Rocha',    'carlos.rocha@example.com',    'Listener',  'pass',    '2021-10-10');
+INSERT INTO User (Name, Email, Role, Password, DateJoined) VALUES ('Bruna Moreira',   'bruna.moreira@example.com',   'Listener',  'ola123',  '2022-07-19');
+INSERT INTO User (Name, Email, Role, Password, DateJoined) VALUES ('Filipe Gomes',    'filipe.gomes@example.com',    'Admin',     'filg45',  '2020-06-23');
+INSERT INTO User (Name, Email, Role, Password, DateJoined) VALUES ('Beatriz Faria',   'beatriz.faria@example.com',   'Listener',  'bfaria',  '2024-03-29');
+INSERT INTO User (Name, Email, Role, Password, DateJoined) VALUES ('Ana Carvalho',    'ana.carvalho@example.com',    'Creator',   '220709',  '2023-05-14');
+INSERT INTO User (Name, Email, Role, Password, DateJoined) VALUES ('Daniel Pinto',    'daniel.pinto@example.com',    'Creator',   'dani321', '2019-12-06');
+INSERT INTO User (Name, Email, Role, Password, DateJoined) VALUES ('Joao Sousa',      'joao.sousa@example.com',      'Listener',  'jsousa',  '2021-08-26');
+INSERT INTO User (Name, Email, Role, Password, DateJoined) VALUES ('Pedro Ferreira',  'pedro.ferreira@example.com',  'Moderator', '9876',    '2020-01-01');
+INSERT INTO User (Name, Email, Role, Password, DateJoined) VALUES ('Matilde Soares',  'matilde.soares@example.com',  'Listener',  'soares67','2022-12-09');
+INSERT INTO User (Name, Email, Role, Password, DateJoined) VALUES ('Marisa Magalhaes','marisa.magalhaes@example.com','Listener',  'pass123', '2019-02-18');
+INSERT INTO User (Name, Email, Role, Password, DateJoined) VALUES ('Andreia Silva',   'andreia.silva@example.com',   'Moderator', 'ssap',    '2023-07-30');
+
+INSERT INTO Artist (Name, Country, DebutYear) VALUES ('Coldplay',       'UK',        1996);
+INSERT INTO Artist (Name, Country, DebutYear) VALUES ('Adele',          'UK',        2008);
+INSERT INTO Artist (Name, Country, DebutYear) VALUES ('Eminem',         'USA',       1996);
+INSERT INTO Artist (Name, Country, DebutYear) VALUES ('Rihanna',        'Barbados',  2005);
+INSERT INTO Artist (Name, Country, DebutYear) VALUES ('Ed Sheeran',     'UK',        2011);
+INSERT INTO Artist (Name, Country, DebutYear) VALUES ('Taylor Swift',   'USA',       2006);
+INSERT INTO Artist (Name, Country, DebutYear) VALUES ('Shakira',        'Colombia',  1991);
+INSERT INTO Artist (Name, Country, DebutYear) VALUES ('Lana Del Rey',   'USA',       2005);
+INSERT INTO Artist (Name, Country, DebutYear) VALUES ('AC/DC',          'Australia', 1973);
+INSERT INTO Artist (Name, Country, DebutYear) VALUES ('Nelly Furtado',  'Canada',    1996);
+INSERT INTO Artist (Name, Country, DebutYear) VALUES ('Billie Eilish',  'USA',       2015);
+INSERT INTO Artist (Name, Country, DebutYear) VALUES ('Kendrick Lamar', 'USA',       2003);
+
+INSERT INTO ArtistFollowing(UserID, ArtistID, Date) VALUES (1, 1, '2024-06-01');
+INSERT INTO ArtistFollowing(UserID, ArtistID, Date) VALUES (1, 2, '2024-06-02');
+INSERT INTO ArtistFollowing(UserID, ArtistID, Date) VALUES (2, 3, '2024-06-03');
+INSERT INTO ArtistFollowing(UserID, ArtistID, Date) VALUES (3, 4, '2024-06-04');
+INSERT INTO ArtistFollowing(UserID, ArtistID, Date) VALUES (4, 5, '2024-06-05');
+INSERT INTO ArtistFollowing(UserID, ArtistID, Date) VALUES (5, 6, '2024-06-06');
+INSERT INTO ArtistFollowing(UserID, ArtistID, Date) VALUES (6, 7, '2024-06-07');
+INSERT INTO ArtistFollowing(UserID, ArtistID, Date) VALUES (7, 8, '2024-06-08');
+INSERT INTO ArtistFollowing(UserID, ArtistID, Date) VALUES (8, 9, '2024-06-09');
+INSERT INTO ArtistFollowing(UserID, ArtistID, Date) VALUES (9,10, '2024-06-10');
+INSERT INTO ArtistFollowing(UserID, ArtistID, Date) VALUES (10,2, '2024-06-11');
+INSERT INTO ArtistFollowing(UserID, ArtistID, Date) VALUES (11,4, '2024-06-12');
+INSERT INTO ArtistFollowing(UserID, ArtistID, Date) VALUES (11,5, '2024-06-12');
+
+INSERT INTO Podcast (Name, Description) VALUES ('Joe Rogan', 'The Joe Rogan Experience — conversas longas com celebridades, cientistas, atletas e especialistas.'); 
+INSERT INTO Podcast (Name, Description) VALUES ('Alex Cooper', 'Call Her Daddy — entrevistas e conversas sobre cultura pop, relacionamentos e saúde mental.');
+INSERT INTO Podcast (Name, Description) VALUES ('NPR', 'The Daily — notícias diárias com explicações profundas e contexto.');
+INSERT INTO Podcast (Name, Description) VALUES ('This American Life', 'Histórias reais contadas por pessoas comuns com narrativa envolvente.');
+INSERT INTO Podcast (Name, Description) VALUES ('Crime Junkie', 'Podcast de true crime com relatos semanais de casos reais.');
+INSERT INTO Podcast (Name, Description) VALUES ('SmartLess', 'Jason Bateman, Will Arnett e Sean Hayes entrevistam convidados num formato descontraído.');
+INSERT INTO Podcast (Name, Description) VALUES ('Huberman Lab', 'Dr. Andrew Huberman explica ciência aplicada à saúde, bem-estar, treino e cérebro humano.');
+INSERT INTO Podcast (Name, Description) VALUES ('Stuff You Should Know', 'Explicações simples e divertidas sobre como coisas do dia a dia funcionam.');
+INSERT INTO Podcast (Name, Description) VALUES ('Serial', 'Podcast de investigação criminal responsável pela popularização do formato.');
+INSERT INTO Podcast (Name, Description) VALUES ('My Favorite Murder', 'Kelley e Georgia discutem casos criminais reais com humor e narrativa informal.');
+
+INSERT INTO PodcastFollowing(UserID, PodcastID, Date) VALUES (1, 1, '2024-07-01');
+INSERT INTO PodcastFollowing(UserID, PodcastID, Date) VALUES (2, 1, '2024-07-02');
+INSERT INTO PodcastFollowing(UserID, PodcastID, Date) VALUES (2, 2, '2024-07-03');
+INSERT INTO PodcastFollowing(UserID, PodcastID, Date) VALUES (3, 3, '2024-07-04');
+INSERT INTO PodcastFollowing(UserID, PodcastID, Date) VALUES (4, 4, '2024-07-05');
+INSERT INTO PodcastFollowing(UserID, PodcastID, Date) VALUES (5, 5, '2024-07-06');
+INSERT INTO PodcastFollowing(UserID, PodcastID, Date) VALUES (6, 6, '2024-07-07');
+INSERT INTO PodcastFollowing(UserID, PodcastID, Date) VALUES (7, 7, '2024-07-08');
+INSERT INTO PodcastFollowing(UserID, PodcastID, Date) VALUES (8, 8, '2024-07-09');
+INSERT INTO PodcastFollowing(UserID, PodcastID, Date) VALUES (9, 9, '2024-07-10');
+INSERT INTO PodcastFollowing(UserID, PodcastID, Date) VALUES (10,10,'2024-07-11');
+INSERT INTO PodcastFollowing(UserID, PodcastID, Date) VALUES (11, 2,'2024-07-12');
+INSERT INTO PodcastFollowing(UserID, PodcastID, Date) VALUES (11, 4,'2024-07-12');
+
+INSERT INTO Device(IpAddress, OS, Location) VALUES ('192.168.1.10', 'Android', 'Lisboa, Portugal');
+INSERT INTO Device(IpAddress, OS, Location) VALUES ('192.168.1.11', 'iOS',     'Porto, Portugal');
+INSERT INTO Device(IpAddress, OS, Location) VALUES ('172.16.0.5',   'Windows', 'Madrid, Espanha');
+INSERT INTO Device(IpAddress, OS, Location) VALUES ('10.0.0.23',    'iOS',   'Nova Iorque, EUA');
+INSERT INTO Device(IpAddress, OS, Location) VALUES ('10.0.0.45',    'Linux',   'Berlim, Alemanha');
+INSERT INTO Device(IpAddress, OS, Location) VALUES ('192.168.0.55', 'Android', 'São Paulo, Brasil');
+INSERT INTO Device(IpAddress, OS, Location) VALUES ('192.168.1.77', 'iOS',     'Paris, França');
+INSERT INTO Device(IpAddress, OS, Location) VALUES ('10.1.1.12',    'Windows', 'Londres, Reino Unido');
+INSERT INTO Device(IpAddress, OS, Location) VALUES ('172.16.2.33',  'Android', 'Roma, Itália');
+INSERT INTO Device(IpAddress, OS, Location) VALUES ('192.168.0.90', 'iOS',   'Toronto, Canadá');
+
+INSERT INTO Subscription(PlanType, StartDate, EndDate) VALUES ('Individual', '2024-01-01', '2024-12-31');
+INSERT INTO Subscription(PlanType, StartDate, EndDate) VALUES ('Free',    '2024-03-15', NULL);
+INSERT INTO Subscription(PlanType, StartDate, EndDate) VALUES ('Family',  '2024-02-10', '2025-02-09');
+INSERT INTO Subscription(PlanType, StartDate, EndDate) VALUES ('Duo', '2024-05-01', '2024-11-01');
+INSERT INTO Subscription(PlanType, StartDate, EndDate) VALUES ('Individual', '2024-04-12', '2024-05-12');
+INSERT INTO Subscription(PlanType, StartDate, EndDate) VALUES ('Free',    '2024-06-20', NULL);
+INSERT INTO Subscription(PlanType, StartDate, EndDate) VALUES ('Individual', '2024-01-25', '2024-07-25');
+INSERT INTO Subscription(PlanType, StartDate, EndDate) VALUES ('Family',  '2024-03-30', '2024-12-30');
+INSERT INTO Subscription(PlanType, StartDate, EndDate) VALUES ('Duo', '2024-02-18', '2024-08-18');
+INSERT INTO Subscription(PlanType, StartDate, EndDate) VALUES ('Individual', '2024-07-01', '2024-08-01');
+
+INSERT INTO SessionInfo(UserID, DeviceID, SubscriptionID, IsActive, RevokedAt, LastAccessAt) VALUES (1, 1, 1, 1, '2024-07-21', '2024-07-20');
+INSERT INTO SessionInfo(UserID, DeviceID, SubscriptionID, IsActive, RevokedAt, LastAccessAt) VALUES (1, 2, 1, 1, '2024-07-01', '2024-06-30');
+INSERT INTO SessionInfo(UserID, DeviceID, SubscriptionID, IsActive, RevokedAt, LastAccessAt) VALUES (2, 3, 2, 1, '2024-01-23', '2024-01-22');
+INSERT INTO SessionInfo(UserID, DeviceID, SubscriptionID, IsActive, RevokedAt, LastAccessAt) VALUES (3, 4, 3, 0, '2024-06-10', '2024-06-09');
+INSERT INTO SessionInfo(UserID, DeviceID, SubscriptionID, IsActive, RevokedAt, LastAccessAt) VALUES (5, 6, 5, 1, '2024-04-23', '2024-04-22');
+INSERT INTO SessionInfo(UserID, DeviceID, SubscriptionID, IsActive, RevokedAt, LastAccessAt) VALUES (6, 7, 6, 1, '2024-05-12', '2024-05-11');
+INSERT INTO SessionInfo(UserID, DeviceID, SubscriptionID, IsActive, RevokedAt, LastAccessAt) VALUES (4, 5, 4, 1, '2024-06-01', '2024-05-31');
+INSERT INTO SessionInfo(UserID, DeviceID, SubscriptionID, IsActive, RevokedAt, LastAccessAt) VALUES (7, 8, 7, 0, '2024-05-15', '2024-05-14');
+INSERT INTO SessionInfo(UserID, DeviceID, SubscriptionID, IsActive, RevokedAt, LastAccessAt) VALUES (8, 9, 8, 1, '2024-02-12', '2024-02-11');
+INSERT INTO SessionInfo(UserID, DeviceID, SubscriptionID, IsActive, RevokedAt, LastAccessAt) VALUES (9, 10, 9, 1, '2024-03-24', '2024-03-23');
+
+INSERT INTO FreeUser(UserID, LastAdTimestamp, MaxDailySkips, AdsWatchedCount) VALUES (2, '2024-08-01 14:22:10', 6, 124);
+INSERT INTO FreeUser(UserID, LastAdTimestamp, MaxDailySkips, AdsWatchedCount) VALUES (6, '2024-08-01 20:05:12', 6, 203);
+INSERT INTO FreeUser(UserID, LastAdTimestamp, MaxDailySkips, AdsWatchedCount) VALUES (13,'2024-08-01 21:55:12', 6, 167);
+
+INSERT INTO PremiumUser(UserID, MaxOfflineDevices, MaxDownloadedTracks) VALUES (1,  5, 8000);
+INSERT INTO PremiumUser(UserID, MaxOfflineDevices, MaxDownloadedTracks) VALUES (5,  4, 6000);
+INSERT INTO PremiumUser(UserID, MaxOfflineDevices, MaxDownloadedTracks) VALUES (4, 5, 10000);
+INSERT INTO PremiumUser(UserID, MaxOfflineDevices, MaxDownloadedTracks) VALUES (12, 3, 4500);
+INSERT INTO PremiumUser(UserID, MaxOfflineDevices, MaxDownloadedTracks) VALUES (11, 4, 7200);
+INSERT INTO PremiumUser(UserID, MaxOfflineDevices, MaxDownloadedTracks) VALUES (3, 4, 9500);
+INSERT INTO PremiumUser(UserID, MaxOfflineDevices, MaxDownloadedTracks) VALUES (7, 4, 5000);
+INSERT INTO PremiumUser(UserID, MaxOfflineDevices, MaxDownloadedTracks) VALUES (8, 3, 3000);
+INSERT INTO PremiumUser(UserID, MaxOfflineDevices, MaxDownloadedTracks) VALUES (9, 5, 8500);
+INSERT INTO PremiumUser(UserID, MaxOfflineDevices, MaxDownloadedTracks) VALUES (10, 4, 7000);
+
+INSERT INTO Album(AlbumID, Title, ReleaseDate, Duration) VALUES  (1, 'Born to Die', '2012-01-27', 2968);
+INSERT INTO Album(AlbumID, Title, ReleaseDate, Duration) VALUES  (2, '1989 (Taylor''s Version)', '2023-10-27', 4620);
+INSERT INTO Album(AlbumID, Title, ReleaseDate, Duration) VALUES  (3, 'DAMN.', '2017-04-14', 3360);
+INSERT INTO Album(AlbumID, Title, ReleaseDate, Duration) VALUES  (4, '÷ (Divide)', '2017-03-03', 2500); 
+INSERT INTO Album(AlbumID, Title, ReleaseDate, Duration) VALUES  (6, 'Loud', '2010-11-12', 2890);
+INSERT INTO Album(AlbumID, Title, ReleaseDate, Duration) VALUES  (7, 'WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?', '2019-03-29', 2580);
+INSERT INTO Album(AlbumID, Title, ReleaseDate, Duration) VALUES  (8, 'Happier Than Ever', '2021-07-30', 3460); 
+
+INSERT INTO Track(Title, Duration, AlbumID) VALUES ('Born to Die',                          295, 1);
+INSERT INTO Track(Title, Duration, AlbumID) VALUES ('Blank Space (Taylor''s Version)',      231, 2);
+INSERT INTO Track(Title, Duration, AlbumID) VALUES ('HUMBLE.',                              177, 3);
+INSERT INTO Track(Title, Duration, AlbumID) VALUES ('Shape of You',                         233, 4);
+INSERT INTO Track(Title, Duration, AlbumID) VALUES ('Only Girl (In the World)',             235, 6);
+INSERT INTO Track(Title, Duration, AlbumID) VALUES ('Blue Jeans',                           206, 1);
+INSERT INTO Track(Title, Duration, AlbumID) VALUES ('Happier Than Ever',                    298, 8);
+INSERT INTO Track(Title, Duration, AlbumID) VALUES ('Video Games',                          276, 1);
+INSERT INTO Track(Title, Duration, AlbumID) VALUES ('Wildest Dreams (Taylor''s Version)',   220, 2);
+INSERT INTO Track(Title, Duration, AlbumID) VALUES ('bad guy',                              194, 7);
+
+INSERT INTO TrackListeningHistory(UserID, TrackID, TimePlayed) VALUES (1, 1, 295);
+INSERT INTO TrackListeningHistory(UserID, TrackID, TimePlayed) VALUES (1, 2, 230);
+INSERT INTO TrackListeningHistory(UserID, TrackID, TimePlayed) VALUES (2, 3, 177);
+INSERT INTO TrackListeningHistory(UserID, TrackID, TimePlayed) VALUES (3, 4, 233);
+INSERT INTO TrackListeningHistory(UserID, TrackID, TimePlayed) VALUES (4, 5, 235);
+INSERT INTO TrackListeningHistory(UserID, TrackID, TimePlayed) VALUES (5, 6, 206);
+INSERT INTO TrackListeningHistory(UserID, TrackID, TimePlayed) VALUES (6, 7, 298);
+INSERT INTO TrackListeningHistory(UserID, TrackID, TimePlayed) VALUES (7, 8, 276);
+INSERT INTO TrackListeningHistory(UserID, TrackID, TimePlayed) VALUES (8, 9, 220);
+INSERT INTO TrackListeningHistory(UserID, TrackID, TimePlayed) VALUES (9,10, 194);
+
+INSERT INTO Playlist(Title, CreationDate, IsPublic, NumberOfTracks) VALUES ('Treinos de Corrida',       '2024-06-01', 1, 15);
+INSERT INTO Playlist(Title, CreationDate, IsPublic, NumberOfTracks) VALUES ('Focus no Trabalho',        '2024-06-05', 0, 20);
+INSERT INTO Playlist(Title, CreationDate, IsPublic, NumberOfTracks) VALUES ('Clássicos 2000s',          '2024-06-10', 1, 30);
+INSERT INTO Playlist(Title, CreationDate, IsPublic, NumberOfTracks) VALUES ('Só Rihanna e Beyoncé',     '2024-06-12', 1, 12);
+INSERT INTO Playlist(Title, CreationDate, IsPublic, NumberOfTracks) VALUES ('Rock para Estudar',        '2024-06-15', 0, 18);
+INSERT INTO Playlist(Title, CreationDate, IsPublic, NumberOfTracks) VALUES ('Chill Sunday',             '2024-06-20', 1, 25);
+INSERT INTO Playlist(Title, CreationDate, IsPublic, NumberOfTracks) VALUES ('Billie Eilish Vibes',      '2024-06-22', 1, 10);
+INSERT INTO Playlist(Title, CreationDate, IsPublic, NumberOfTracks) VALUES ('Músicas para Cantar no Carro', '2024-06-25', 1, 22);
+
+INSERT INTO UserAccessPlaylist(UserID, PlaylistID) VALUES (1, 1);
+INSERT INTO UserAccessPlaylist(UserID, PlaylistID) VALUES (2, 2);
+INSERT INTO UserAccessPlaylist(UserID, PlaylistID) VALUES (3, 3);
+INSERT INTO UserAccessPlaylist(UserID, PlaylistID) VALUES (4, 4);
+INSERT INTO UserAccessPlaylist(UserID, PlaylistID) VALUES (5, 5);
+INSERT INTO UserAccessPlaylist(UserID, PlaylistID) VALUES (6, 6);
+INSERT INTO UserAccessPlaylist(UserID, PlaylistID) VALUES (7, 7);
+INSERT INTO UserAccessPlaylist(UserID, PlaylistID) VALUES (8, 8);
+
+INSERT INTO Collaboration(ArtistID, TrackID, Role) VALUES (8, 1, 'Main Artist');  
+INSERT INTO Collaboration(ArtistID, TrackID, Role) VALUES (6, 2, 'Main Artist');  
+INSERT INTO Collaboration(ArtistID, TrackID, Role) VALUES (12,3, 'Main Artist');  
+INSERT INTO Collaboration(ArtistID, TrackID, Role) VALUES (5, 4, 'Main Artist');   
+INSERT INTO Collaboration(ArtistID, TrackID, Role) VALUES (4, 5, 'Main Artist');  
+INSERT INTO Collaboration(ArtistID, TrackID, Role) VALUES (8, 6, 'Main Artist');  
+INSERT INTO Collaboration(ArtistID, TrackID, Role) VALUES (11,7, 'Main Artist');   
+INSERT INTO Collaboration(ArtistID, TrackID, Role) VALUES (8, 8, 'Main Artist');  
+INSERT INTO Collaboration(ArtistID, TrackID, Role) VALUES (6, 9, 'Main Artist');  
+INSERT INTO Collaboration(ArtistID, TrackID, Role) VALUES (11,10,'Main Artist');
+
+INSERT INTO RecordLabel(Name, Country) VALUES ('Universal Music Group', 'USA');
+INSERT INTO RecordLabel(Name, Country) VALUES ('Sony Music Entertainment', 'USA');
+INSERT INTO RecordLabel(Name, Country) VALUES ('Warner Music Group', 'USA');
+INSERT INTO RecordLabel(Name, Country) VALUES ('Columbia Records', 'USA');
+INSERT INTO RecordLabel(Name, Country) VALUES ('Atlantic Records', 'USA');
+INSERT INTO RecordLabel(Name, Country) VALUES ('Interscope Records', 'USA');
+INSERT INTO RecordLabel(Name, Country) VALUES ('Island Records', 'UK');
+INSERT INTO RecordLabel(Name, Country) VALUES ('Capitol Records', 'USA');
+INSERT INTO RecordLabel(Name, Country) VALUES ('Republic Records', 'USA');
+INSERT INTO RecordLabel(Name, Country) VALUES ('RCA Records', 'USA');
+
+INSERT INTO ContractWithLabel(ArtistID, LabelID) VALUES (6, 9); 
+INSERT INTO ContractWithLabel(ArtistID, LabelID) VALUES (5, 5); 
+INSERT INTO ContractWithLabel(ArtistID, LabelID) VALUES (3, 6);
+INSERT INTO ContractWithLabel(ArtistID, LabelID) VALUES (4, 1);
+INSERT INTO ContractWithLabel(ArtistID, LabelID) VALUES (8, 6);
+INSERT INTO ContractWithLabel(ArtistID, LabelID) VALUES (11,6);
+INSERT INTO ContractWithLabel(ArtistID, LabelID) VALUES (12,6);
+INSERT INTO ContractWithLabel(ArtistID, LabelID) VALUES (2, 4);
+INSERT INTO ContractWithLabel(ArtistID, LabelID) VALUES (7, 2);
+INSERT INTO ContractWithLabel(ArtistID, LabelID) VALUES (9, 4);
+INSERT INTO ContractWithLabel(ArtistID, LabelID) VALUES (10,6);
+
+INSERT INTO Genre(Name, Description) VALUES ('Pop', 'Mainstream popular music with melodic focus.');
+INSERT INTO Genre(Name, Description) VALUES ('Rock', 'Electric guitar-driven music with strong rhythms.');
+INSERT INTO Genre(Name, Description) VALUES ('Hip-Hop', 'Rhythmic music with rap vocals.');
+INSERT INTO Genre(Name, Description) VALUES ('R&B', 'Soulful vocals with smooth rhythms.');
+INSERT INTO Genre(Name, Description) VALUES ('Electronic', 'Music created primarily with synthesizers.');
+INSERT INTO Genre(Name, Description) VALUES ('Indie', 'Independent music with alternative influences.');
+INSERT INTO Genre(Name, Description) VALUES ('Metal', 'Heavy, aggressive guitar-driven music.');
+INSERT INTO Genre(Name, Description) VALUES ('Country', 'Music based on folk and storytelling traditions.');
+INSERT INTO Genre(Name, Description) VALUES ('Reggaeton', 'Latin urban music with dembow rhythm.');
+INSERT INTO Genre(Name, Description) VALUES ('Alternative', 'Non-mainstream music exploring experimental styles.');
+
+INSERT INTO TrackOfGenre(TrackID, GenreID) VALUES (1, 6);
+INSERT INTO TrackOfGenre(TrackID, GenreID) VALUES (2, 1);
+INSERT INTO TrackOfGenre(TrackID, GenreID) VALUES (3, 3);
+INSERT INTO TrackOfGenre(TrackID, GenreID) VALUES (4, 1);
+INSERT INTO TrackOfGenre(TrackID, GenreID) VALUES (5, 1);
+INSERT INTO TrackOfGenre(TrackID, GenreID) VALUES (6, 6);
+INSERT INTO TrackOfGenre(TrackID, GenreID) VALUES (7,10);
+INSERT INTO TrackOfGenre(TrackID, GenreID) VALUES (8, 6);
+INSERT INTO TrackOfGenre(TrackID, GenreID) VALUES (9, 1);
+INSERT INTO TrackOfGenre(TrackID, GenreID) VALUES (10,10);
+
+INSERT INTO AlbumOfGenre(AlbumID, GenreID) VALUES (1, 6);
+INSERT INTO AlbumOfGenre(AlbumID, GenreID) VALUES (2, 1);
+INSERT INTO AlbumOfGenre(AlbumID, GenreID) VALUES (3, 3); 
+INSERT INTO AlbumOfGenre(AlbumID, GenreID) VALUES (4, 1);
+INSERT INTO AlbumOfGenre(AlbumID, GenreID) VALUES (6, 1);
+INSERT INTO AlbumOfGenre(AlbumID, GenreID) VALUES (7,10);
+INSERT INTO AlbumOfGenre(AlbumID, GenreID) VALUES (8,10);
+
+INSERT INTO TrackInPlaylist(TrackID, PlaylistID) VALUES (1, 1);
+INSERT INTO TrackInPlaylist(TrackID, PlaylistID) VALUES (4, 1);
+INSERT INTO TrackInPlaylist(TrackID, PlaylistID) VALUES (2, 2);
+INSERT INTO TrackInPlaylist(TrackID, PlaylistID) VALUES (7, 2);
+INSERT INTO TrackInPlaylist(TrackID, PlaylistID) VALUES (3, 3);
+INSERT INTO TrackInPlaylist(TrackID, PlaylistID) VALUES (5, 3);
+INSERT INTO TrackInPlaylist(TrackID, PlaylistID) VALUES (5, 4);
+INSERT INTO TrackInPlaylist(TrackID, PlaylistID) VALUES (2, 4);
+INSERT INTO TrackInPlaylist(TrackID, PlaylistID) VALUES (3, 5);    
+INSERT INTO TrackInPlaylist(TrackID, PlaylistID) VALUES (7, 6);
+INSERT INTO TrackInPlaylist(TrackID, PlaylistID) VALUES (7, 7); 
+INSERT INTO TrackInPlaylist(TrackID, PlaylistID) VALUES (1, 8);
+INSERT INTO TrackInPlaylist(TrackID, PlaylistID) VALUES (5, 8);
+
+INSERT INTO Participant(Name, Bio, Country, Contact) VALUES ('João Almeida',      'Comediante e comentador de cultura pop.',          'Portugal', 'joao.almeida@example.com');
+INSERT INTO Participant(Name, Bio, Country, Contact) VALUES ('Maria Fernandes',   'Jornalista especializada em política internacional.','Portugal','maria.fernandes@example.com');
+INSERT INTO Participant(Name, Bio, Country, Contact) VALUES ('Rui Barbosa',       'Historiador e autor de vários livros.',            'Brasil',   'rui.barbosa@example.com');
+INSERT INTO Participant(Name, Bio, Country, Contact) VALUES ('Sofia Costa',       'Psicóloga clínica focada em saúde mental.',        'Portugal', 'sofia.costa@example.com');
+INSERT INTO Participant(Name, Bio, Country, Contact) VALUES ('Ana Ribeiro',       'Médica cardiologista e investigadora.',            'Portugal', 'ana.ribeiro@example.com');
+INSERT INTO Participant(Name, Bio, Country, Contact) VALUES ('Miguel Torres',     'Especialista em tecnologia e cibersegurança.',     'Espanha',  'miguel.torres@example.com');
+INSERT INTO Participant(Name, Bio, Country, Contact) VALUES ('Carla Martins',     'Produtora de podcasts e apresentadora.',           'Portugal', 'carla.martins@example.com');
+INSERT INTO Participant(Name, Bio, Country, Contact) VALUES ('David Silva',       'Treinador físico e especialista em performance.',  'Brasil',   'david.silva@example.com');
+INSERT INTO Participant(Name, Bio, Country, Contact) VALUES ('Inês Rodrigues',    'Artista musical e compositora.',                   'Portugal', 'ines.rodrigues@example.com');
+INSERT INTO Participant(Name, Bio, Country, Contact) VALUES ('Pedro Nunes',       'Economista e comentador de mercados financeiros.', 'Portugal', 'pedro.nunes@example.com');
+
+INSERT INTO PodcastRole(ParticipantID, PodcastID, Role) VALUES (1, 1, 'Guest'); 
+INSERT INTO PodcastRole(ParticipantID, PodcastID, Role) VALUES (2, 3, 'Guest'); 
+INSERT INTO PodcastRole(ParticipantID, PodcastID, Role) VALUES (3, 4, 'Guest');
+INSERT INTO PodcastRole(ParticipantID, PodcastID, Role) VALUES (4, 6, 'Guest');
+INSERT INTO PodcastRole(ParticipantID, PodcastID, Role) VALUES (5, 7, 'MainHost'); 
+INSERT INTO PodcastRole(ParticipantID, PodcastID, Role) VALUES (6, 7, 'Guest');
+INSERT INTO PodcastRole(ParticipantID, PodcastID, Role) VALUES (7, 2, 'CoHost');
+INSERT INTO PodcastRole(ParticipantID, PodcastID, Role) VALUES (7, 5, 'CoHost');
+INSERT INTO PodcastRole(ParticipantID, PodcastID, Role) VALUES (8, 1, 'Guest');
+INSERT INTO PodcastRole(ParticipantID, PodcastID, Role) VALUES (9, 8, 'Guest');
+INSERT INTO PodcastRole(ParticipantID, PodcastID, Role) VALUES (10,9, 'Guest');
+INSERT INTO PodcastRole(ParticipantID, PodcastID, Role) VALUES (10,10,'Guest'); 
+
+INSERT INTO Episode(Title, Description, Duration, ReleaseDate, EpisodeNumber, PodcastID) VALUES ('AI and the Future', 'Conversas sobre o impacto da inteligência artificial na sociedade.', 5400, '2024-01-10', 1, 1); 
+INSERT INTO Episode(Title, Description, Duration, ReleaseDate, EpisodeNumber, PodcastID) VALUES ('Fitness and Health', 'Discussão sobre treino, dieta e saúde mental.',                    4800, '2024-01-17', 2, 1);
+INSERT INTO Episode(Title, Description, Duration, ReleaseDate, EpisodeNumber, PodcastID) VALUES ('Relationships in 2024', 'Conversas abertas sobre relações modernas.',                   3600, '2024-02-01', 1, 2);
+INSERT INTO Episode(Title, Description, Duration, ReleaseDate, EpisodeNumber, PodcastID) VALUES ('Social Media & Identity', 'Impacto das redes sociais na autoimagem.',                    3900, '2024-02-08', 2, 2); 
+INSERT INTO Episode(Title, Description, Duration, ReleaseDate, EpisodeNumber, PodcastID) VALUES ('Global News Roundup', 'Resumo das principais notícias globais do dia.',                 1800, '2024-03-01', 1, 3);
+INSERT INTO Episode(Title, Description, Duration, ReleaseDate, EpisodeNumber, PodcastID) VALUES ('Elections Special', 'Análise das últimas eleições internacionais.',                     2100, '2024-03-05', 2, 3);
+INSERT INTO Episode(Title, Description, Duration, ReleaseDate, EpisodeNumber, PodcastID) VALUES ('Strange Small Town Stories', 'Histórias insólitas de pequenas cidades.',                2700, '2024-03-20', 1, 4);
+INSERT INTO Episode(Title, Description, Duration, ReleaseDate, EpisodeNumber, PodcastID) VALUES ('Love and Loss', 'Relatos reais sobre amor, perda e mudança.',                           3000, '2024-03-27', 2, 4);
+INSERT INTO Episode(Title, Description, Duration, ReleaseDate, EpisodeNumber, PodcastID) VALUES ('Unsolved Case #101', 'Análise de um caso de true crime ainda sem solução.',             3200, '2024-04-10', 1, 5);
+INSERT INTO Episode(Title, Description, Duration, ReleaseDate, EpisodeNumber, PodcastID) VALUES ('Solved Case: The Confession', 'História de um caso resolvido após anos em aberto.',     3400, '2024-04-17', 2, 5);
+
+INSERT INTO Payment(Amount, Method, Date, SubscriptionID) VALUES (10.00,  'CreditCard', '2024-01-01', 1);
+INSERT INTO Payment(Amount, Method, Date, SubscriptionID) VALUES (0.00,  'Free',        '2024-03-15', 2);
+INSERT INTO Payment(Amount, Method, Date, SubscriptionID) VALUES (15.00, 'CreditCard', '2024-02-10', 3);
+INSERT INTO Payment(Amount, Method, Date, SubscriptionID) VALUES (5.00,  'Paypal',  '2024-05-01', 4);
+INSERT INTO Payment(Amount, Method, Date, SubscriptionID) VALUES (10.00,  'GiftCode',      '2024-04-12', 5);
+INSERT INTO Payment(Amount, Method, Date, SubscriptionID) VALUES (0.00,  'Free',        '2024-06-20', 6);
+INSERT INTO Payment(Amount, Method, Date, SubscriptionID) VALUES (10.00,  'Paypal', '2024-01-25', 7);
+INSERT INTO Payment(Amount, Method, Date, SubscriptionID) VALUES (15.00, 'CreditCard', '2024-03-30', 8);
+INSERT INTO Payment(Amount, Method, Date, SubscriptionID) VALUES (5.00,  'GiftCode',  '2024-02-18', 9);
+INSERT INTO Payment(Amount, Method, Date, SubscriptionID) VALUES (10.00,  'CreditCard', '2024-07-01', 10);
+
+INSERT INTO EpisodeListeningHistory(UserID, EpisodeID, TimePlayed) VALUES (1, 1, 3200);
+INSERT INTO EpisodeListeningHistory(UserID, EpisodeID, TimePlayed) VALUES (1, 2, 1500);
+INSERT INTO EpisodeListeningHistory(UserID, EpisodeID, TimePlayed) VALUES (2, 3, 3600);
+INSERT INTO EpisodeListeningHistory(UserID, EpisodeID, TimePlayed) VALUES (3, 4, 1800);
+INSERT INTO EpisodeListeningHistory(UserID, EpisodeID, TimePlayed) VALUES (4, 5, 1800);
+INSERT INTO EpisodeListeningHistory(UserID, EpisodeID, TimePlayed) VALUES (5, 6, 2100);
+INSERT INTO EpisodeListeningHistory(UserID, EpisodeID, TimePlayed) VALUES (6, 7, 2700);
+INSERT INTO EpisodeListeningHistory(UserID, EpisodeID, TimePlayed) VALUES (7, 8, 500);
+INSERT INTO EpisodeListeningHistory(UserID, EpisodeID, TimePlayed) VALUES (8, 9, 3200);
+INSERT INTO EpisodeListeningHistory(UserID, EpisodeID, TimePlayed) VALUES (9,10, 3400);
+
+COMMIT;
