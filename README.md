@@ -120,5 +120,5 @@ The database includes sample data with:
 This is an academic project developed for the Database Systems course at FEUP.
 The code is provided for educational purposes only.
 
-© 2025 Leandro Moreira - FEUP
+© 2025 Leandro Moreira, Ricardo Silva, Ana Ferreira
 
